@@ -1,0 +1,31 @@
+#title {
+  background-image: linear-gradient(to right, #3b656d, #a1dbec);
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+#h1-div {
+  margin-left: 150px;
+}
+
+#reset-btn {
+  background: #ffffff;
+  border: 3px solid #18383b;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 50px;
+  width: 130px;
+  left: 0px;
+  top: 0px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#client-flex {
+  border-bottom: 2px solid #3b656d;
+  padding-bottom: 20px;
+}
