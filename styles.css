@@ -41,21 +41,22 @@ h1 {
   margin-bottom: 30px;
 }
 
+#results {
+  max-width: 500px;
+}
+
 #customer-details {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #add-new {
-  font-size: 15px;
-  padding: 10px;
-  padding-bottom: 20px;
+  font-size: 10px;
 }
 
 .table-responsive {
-  margin: 30px;
+  margin: 0px;
 }
 .table-wrapper {
-  width: 800px;
   background: #fff;
   padding: 20px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -86,12 +87,12 @@ h1 {
 
 .search-box input {
   height: 40px;
-  width: 350px;
+  width: 200px;
   border-radius: 20px;
   padding-left: 35px;
   border-color: #ddd;
   box-shadow: none;
-  font-size: 25px;
+  font-size: 15px;
 }
 .search-box input:focus {
   border-color: #3fbae4;
