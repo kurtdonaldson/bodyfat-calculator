@@ -11,6 +11,11 @@ const bodyfat = document.querySelector("#bodyfat-input");
 const classification = document.querySelector("#classification-input");
 const leanMass = document.querySelector("#lean-mass-input");
 const reset = document.querySelector("#reset-btn");
+const classificationPopulate = document.querySelector(
+  "#classification-populate"
+);
+const bodyfatPopulate = document.querySelector("#bodyfat-populate");
+const todayDate = document.querySelector("#today-date");
 
 calculate.addEventListener("click", () => {
   if (age.value) {
@@ -125,6 +130,11 @@ calculate.addEventListener("click", () => {
   } else {
     alert("Please enter age");
   }
+
+  classificationPopulate.innerHTML = classification.value;
+  bodyfatPopulate.innerHTML = `${bodyfat.value}%`;
+  todayDate.innerHTML = getDate();
+  // date not working
 });
 
 reset.addEventListener("click", () => {
