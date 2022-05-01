@@ -16,6 +16,7 @@ const classificationPopulate = document.querySelector(
 );
 const bodyfatPopulate = document.querySelector("#bodyfat-populate");
 const todayDate = document.querySelector("#today-date");
+const date = new Date();
 
 calculate.addEventListener("click", () => {
   if (age.value) {
@@ -133,7 +134,9 @@ calculate.addEventListener("click", () => {
 
   classificationPopulate.innerHTML = classification.value;
   bodyfatPopulate.innerHTML = `${bodyfat.value}%`;
-  todayDate.innerHTML = getDate();
+  todayDate.innerHTML = `${date.getDate()}.${
+    date.getMonth() + 1
+  }.${date.getFullYear()}`;
   // date not working
 });
 

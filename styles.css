@@ -80,6 +80,11 @@ h1 {
   font-size: 22px;
 }
 
+#save-button {
+  font-size: 15px;
+  height: 25px;
+}
+
 #delete-client {
   font-size: 40px;
   margin-right: 40px;
