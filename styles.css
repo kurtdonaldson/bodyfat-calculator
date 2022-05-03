@@ -9,7 +9,13 @@ h1 {
 }
 
 #h1-div {
-  margin-left: 150px;
+  margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+  #h1 {
+    font-size: 30px;
+  }
 }
 
 #reset-btn {

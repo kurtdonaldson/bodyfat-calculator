@@ -55,7 +55,7 @@
           style="height: 15%; min-height: 96px"
         >
           <div id="h1-div">
-            <h1 class="fw-bold">Skinfold Bodyfat Calculator</h1>
+            <h1 id="h1" class="fw-bold">Skinfold Bodyfat Calculator</h1>
           </div>
         </div>
 
@@ -68,9 +68,7 @@
             id="client-flex"
             class="d-flex justify-content-evenly align-items-center flex-wrap"
           >
-            <div>
-              <h2>Client details</h2>
-            </div>
+         
             <div id="gender" style="min-width: 200px" class="">
               <h4 class="fs-2 text-center mt-1">Gender</h4>
 
@@ -129,7 +127,7 @@
                 </div>
 
                 <div>
-                  <div class="form-check">
+                  <div class="form-check ml-2">
                     <input
                       class="form-check-input fs-5"
                       type="radio"
@@ -139,7 +137,7 @@
                     />
                     <label class="form-check-label fs-5" for="kgs"> kgs </label>
                   </div>
-                  <div class="form-check">
+                  <div class="form-check ml-2">
                     <input
                       class="form-check-input fs-5"
                       type="radio"
@@ -165,9 +163,7 @@
             id="client-flex"
             class="d-flex justify-content-evenly align-items-center flex-wrap"
           >
-            <div>
-              <h2>Measurement sites</h2>
-            </div>
+         
             <div id="biceps">
               <h4 class="text-center">Biceps</h4>
               <div class="d-flex justify-content-center">
@@ -216,14 +212,17 @@
                 />
               </div>
             </div>
-            <button
+            <div style="margin-top: 40px;">
+              
+              <button
               id="calculate-btn"
               type="button"
               class="btn btn-lg"
               style="background: #3b656d; color: white"
             >
               Calculate
-            </button>
+            </button> 
+            </div>
           </div>
         </div>
 
