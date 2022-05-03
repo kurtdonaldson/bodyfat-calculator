@@ -50,7 +50,11 @@ h1 {
 }
 
 #add-new {
-  font-size: 10px;
+  font-size: 12px;
+}
+
+#name-input{
+  border-radius: 4px;
 }
 
 .table-responsive {
