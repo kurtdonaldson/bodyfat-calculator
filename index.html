@@ -12,7 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="public/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -68,7 +68,6 @@
             id="client-flex"
             class="d-flex justify-content-evenly align-items-center flex-wrap"
           >
-         
             <div id="gender" style="min-width: 200px" class="">
               <h4 class="fs-2 text-center mt-1">Gender</h4>
 
@@ -163,7 +162,6 @@
             id="client-flex"
             class="d-flex justify-content-evenly align-items-center flex-wrap"
           >
-         
             <div id="biceps">
               <h4 class="text-center">Biceps</h4>
               <div class="d-flex justify-content-center">
@@ -212,16 +210,15 @@
                 />
               </div>
             </div>
-            <div style="margin-top: 40px;">
-              
+            <div style="margin-top: 40px">
               <button
-              id="calculate-btn"
-              type="button"
-              class="btn btn-lg"
-              style="background: #3b656d; color: white"
-            >
-              Calculate
-            </button> 
+                id="calculate-btn"
+                type="button"
+                class="btn btn-lg"
+                style="background: #3b656d; color: white"
+              >
+                Calculate
+              </button>
             </div>
           </div>
         </div>
@@ -273,7 +270,11 @@
               </div>
             </div>
 
-            <div id="results" class="row d-flex flex-row" style="margin-bottom: 30px;">
+            <div
+              id="results"
+              class="row d-flex flex-row"
+              style="margin-bottom: 30px"
+            >
               <div class="row">
                 <div id="bodyfat">
                   <h2 id="results-heading">Results</h2>
@@ -356,31 +357,32 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <form action="/users" method="POST">
+                        <tr>
+                          <td>
+                            <input
+                              id="name-input"
+                              type="text"
+                              placeholder="Full name"
+                            />
+                          </td>
+
+                          <td>
+                            <div class="col">
+                              <button
+                                type="submit"
+                                class="btn btn-info add-new"
+                                id="add-new"
+                              >
+                                New
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </form>
                       <tr>
                         <td></td>
-                        <td>
-                          <input
-                            id="name-input"
-                            type="text"
-                            placeholder="Full name"
-                          />
-                        </td>
-
-                        <td>
-                          <div class="col">
-                            <button
-                              type="button"
-                              class="btn btn-info add-new"
-                              id="add-new"
-                            >
-                              New
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Maria Anders</td>
+                        <td></td>
 
                         <td>
                           <a
