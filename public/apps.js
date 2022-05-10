@@ -136,9 +136,9 @@ calculate.addEventListener("click", () => {
   classificationPopulate.innerHTML = classification.value;
   bodyfatPopulate.innerHTML = `${bodyfat.value}%`;
   leanmasspopulate.innerHTML = leanMass.value;
-  todayDate.innerHTML = `${date.getDate()}.${
+  todayDate.innerHTML = `${date.getDate()}/${
     date.getMonth() + 1
-  }.${date.getFullYear()}`;
+  }/${date.getFullYear()}`;
   // date not working
 });
 

@@ -96,7 +96,7 @@ app.put("/users", (req, res) => {
     if (err) return console.error(err);
     const db = client.db("node-demo");
     const collection = db.collection("users");
-    const day = `Date:${req.body.date}`;
+    let day = `Test:${req.body.date}`;
     collection
       .findOneAndUpdate(
         { name: req.body.name },
