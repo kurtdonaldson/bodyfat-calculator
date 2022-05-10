@@ -2,7 +2,7 @@ const deleteBtn = document.querySelectorAll(".deleteButton");
 const editBtn = document.querySelectorAll(".editButton");
 const updateBtn = document.querySelector(".updateButton");
 const viewBtn = document.querySelectorAll(".viewButton");
-const clientName = document.querySelector("#client-name");
+const clientName = document.querySelector("#clientName");
 const saveBtn = document.querySelector("#save-button");
 
 for (const button of viewBtn) {
@@ -50,14 +50,40 @@ for (const button of editBtn) {
   });
 }
 
-updateBtn.addEventListener("click", (e) => {
+// updateBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   fetch("/users", {
+//     method: "PUT",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       name: document.querySelector("#newname").value,
+//       oldname: document.querySelector("#oldname").value,
+//     }),
+//   })
+//     .then((res) => {
+//       if (res.ok) return res.json();
+//     })
+//     .then(() => {
+//       window.location.reload();
+//     });
+// });
+
+// saveBtn.addEventListener("click", () => {
+//   console.log(document.querySelector("#clientName").innerHTML);
+// });
+
+saveBtn.addEventListener("click", (e) => {
   e.preventDefault();
   fetch("/users", {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      name: document.querySelector("#newname").value,
-      oldname: document.querySelector("#oldname").value,
+      name: document.querySelector("#clientName").innerHTML,
+      classification: document.querySelector("#classification-populate")
+        .innerHTML,
+      leanMass: document.querySelector("#leanmass-populate").innerHTML,
+      bodyfat: document.querySelector("#bodyfat-populate").innerHTML,
+      date: document.querySelector("#today-date").innerHTML,
     }),
   })
     .then((res) => {
