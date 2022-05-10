@@ -89,6 +89,38 @@ app.put("/users", (req, res) => {
   });
 });
 
+// app.put("/users", (req, res) => {
+//   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
+//     if (err) return console.error(err);
+//     const db = client.db("node-demo");
+//     const collection = db.collection("users");
+//     collection
+//       .findOneAndUpdate(
+//         { name: req.body.name },
+//         {
+//           $set: {
+//             name: req.body.name,
+//             test: {
+//               classification: req.body.classification,
+//               leanMass: req.body.leanMass,
+//               bodyfat: req.body.bodyfat,
+//               date: req.body.date,
+//             },
+//           },
+//         },
+//         {
+//           upsert: true,
+//         }
+//       )
+//       .then(() => {
+//         res.json("Success");
+//       })
+//       .catch(() => {
+//         res.redirect("/");
+//       });
+//   });
+// });
+
 app.listen(3000, () => {
   console.log("LISTENING ON 3000");
 });
