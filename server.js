@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
       .find()
       .toArray()
       .then((results) => {
+        // console.log({ user: results[0].test})
         res.render("index.ejs", { users: results });
       })
       .catch((error) => {
@@ -30,6 +31,25 @@ app.get("/", (req, res) => {
       });
   });
 });
+
+// app.get("/", (req, res) => {
+//   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
+//     if (err) return console.error(err);
+//     const db = client.db("node-demo");
+//     const collection = db.collection("users");
+//     collection
+//       .find()
+//        .find({name: 'Nicola Donaldson'}, { projection: {Test: 0} })
+//       .toArray()
+//       .then((results) => {
+//       console.log(results)
+//         res.render("index.ejs", { users: results });
+//       })
+//       .catch((error) => {
+//         res.redirect("/");
+//       });
+//   });
+// });
 
 app.post("/users", (req, res) => {
   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
@@ -96,14 +116,13 @@ app.put("/users", (req, res) => {
     if (err) return console.error(err);
     const db = client.db("node-demo");
     const collection = db.collection("users");
-    let day = `Test:${req.body.date}`;
     collection
       .findOneAndUpdate(
         { name: req.body.name },
         {
-          $set: {
-            name: req.body.name,
-            [day]: {
+          $push: {
+            // name: req.body.name,
+            test: {
               classification: req.body.classification,
               leanMass: req.body.leanMass,
               bodyfat: req.body.bodyfat,
