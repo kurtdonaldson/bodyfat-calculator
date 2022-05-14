@@ -1,5 +1,6 @@
 
 const deleteBtn = document.querySelectorAll(".deleteButton");
+const deleteTest = document.querySelectorAll(".deleteTest");
 const editBtn = document.querySelectorAll(".editButton");
 const updateBtn = document.querySelector(".updateButton");
 const viewBtn = document.querySelectorAll(".viewButton");
@@ -16,36 +17,17 @@ const clientTD = document.querySelectorAll('.clientTD')
 for (const button of viewBtn) {
   button.addEventListener("click", (e) => {
     clientName.innerHTML = e.target.dataset.name;
-
-    
-
     for(let i of clientYES){
-
        if(i.innerHTML.includes(clientName.innerHTML)){
-        i.style.display = "table-cell";
-        // i.style.colspan = "5"
-        
-             
+        i.style.display = "table-cell";    
        } else{
         i.style.display = "none";
        }
     }
-
-
-
-    // for(let j = 0; j < clientTD.length; j++){
-    //   clientTD[j].style.display = 'table-cell'
-    // }
-
   });
 }
 
 
-for (const button of deleteBtn) {
-  button.addEventListener("click", (e) => {
-    console.log(e.target.dataset);
-  });
-}
 
 for (const button of deleteBtn) {
   button.addEventListener("click", (e) => {

@@ -89,33 +89,7 @@ app.delete("/users", (req, res) => {
   });
 });
 
-// app.put("/users", (req, res) => {
-//   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
-//     if (err) return console.error(err);
-//     const db = client.db("node-demo");
-//     const collection = db.collection("users");
-//     collection
-//       .findOneAndUpdate(
-//         { name: req.body.oldname },
-//         {
-//           $set: {
-//             name: req.body.name,
-//           },
-//         },
-//         {
-//           upsert: true,
-//         }
-//       )
-//       .then(() => {
-//         res.json("Success");
-//       })
-//       .catch(() => {
-//         res.redirect("/");
-//       });
-//   });
-// });
 
-// FIX - Need to change date format to 10/2/2022. Not 10.02.2022
 
 app.put("/users", (req, res) => {
   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
@@ -127,7 +101,6 @@ app.put("/users", (req, res) => {
         { name: req.body.name },
         {
           $push: {
-            // name: req.body.name,
             test: {
               classification: req.body.classification,
               leanMass: req.body.leanMass,
