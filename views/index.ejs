@@ -439,17 +439,18 @@
                   <table class="table table-striped table-hover table-bordered">
                     <thead>
                       <tr>
-                      <th>Name</th>
-                        <th>Date</th>
-                        <th>Classification</th>
-                        <th>Bodyfat</th>
-                        <th>Lean Mass</th>
+                 
+                        <th style="width: 100px;">Date</th>
+                        <th style="width: 80px;">Classification</th>
+                        <th style="width: 100px;">Bodyfat</th>
+                        <th style="text-align: right;">Lean Mass</th>
 
-                        <th>Actions</th>
+                        <th style="text-align: right;">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                      
                         <td id="classification-populate"></td>
                         <td id="leanmass-populate"></td>
                         <td id="bodyfat-populate"></td>
@@ -466,24 +467,46 @@
                           >
                             Save
                           </button>
-                          
                         </td>
                         
                       </tr>
                     
                       <% for(let i = 0; i < users.length; i++) { %>
 
+                        <% if(users[i].test){%>
+
                             <% for(let j = 0; j < users[i].test.length; j++) { %>
                               <tr class="clientRow">
                                
-                                <td class="clientYES" style="display: none;"><%= users[i].name %></td> 
+                                <td colspan="5" class="clientYES" style="display: none; width: 100%;">
+                                  <div style="display: flex; justify-content: space-between">
+                                    <div style="display: none;"><%=users[i].name%></div>
+                                  <div style="width: 60px;"><%=users[i].test[j].date%></div>
+                                  <div style="width: 50px;"><%=users[i].test[j].classification%></div>
+                                  <div><%=users[i].test[j].bodyfat%></div>
+                                  <div style="width: 70px;"><%=users[i].test[j].leanMass%></div>
+                                  <div><button
+                                   
+                                    type="button"
+                                    class="btn btn-danger btn-sm deleteButton"
+                                    style="
+                                      padding: 3px 5px;
+                                    "
+                                  >
+                                    Delete
+                                  </button></div>
+                                  </div>
+                                  
+
+                                </td> 
                            
-                                <td><%= users[i].test[j].date %> </td>
-                             <td><%= users[i].test[j].classification %> </td> 
-                            <td><%= users[i].test[j].bodyfat %> </td>  
-                             <td><%= users[i].test[j].leanMass %></td> 
+
+                               
                              
+
                             </tr>
+                              <% } %>
+
                               <% } %>
 
                         <% } %>
