@@ -382,7 +382,7 @@
                       </form>
                       <% for(let i = 0; i < users.length; i++) { %>
                       <tr>
-                        <td><%= users[i].name %></td>
+                        <td><%= users[i].name %> 
                         <td>
                           <button
                             class="btn btn-primary btn-sm viewButton"
@@ -390,12 +390,7 @@
                           >
                             View
                           </button>
-                          <button
-                            class="btn btn-info btn-sm editButton"
-                            data-name="<%=  users[i].name %>"
-                          >
-                            Edit
-                          </button>
+                         
                           <button
                             class="btn btn-danger btn-sm deleteButton"
                             data-name="<%=  users[i].name %>"
@@ -436,15 +431,7 @@
                       <div class="col" style="padding: 0; width: 600px"></div>
                       <div class="col">
                         <div class="d-flex justify-content-end">
-                          <a
-                            href="#"
-                            class="delete"
-                            title="Delete"
-                            data-toggle="tooltip"
-                            ><i id="delete-client" class="material-icons"
-                              >&#xE872;</i
-                            ></a
-                          >
+                         
                         </div>
                       </div>
                     </div>
@@ -452,10 +439,11 @@
                   <table class="table table-striped table-hover table-bordered">
                     <thead>
                       <tr>
-                        <th>Classification</th>
-                        <th>Lean Mass</th>
-                        <th>Bodyfat</th>
+                      <th>Name</th>
                         <th>Date</th>
+                        <th>Classification</th>
+                        <th>Bodyfat</th>
+                        <th>Lean Mass</th>
 
                         <th>Actions</th>
                       </tr>
@@ -478,23 +466,29 @@
                           >
                             Save
                           </button>
-                          <a
-                            href="#"
-                            class="delete"
-                            title="Delete"
-                            data-toggle="tooltip"
-                            ><i class="material-icons" style="font-size: 30px"
-                              >&#xE872;</i
-                            ></a
-                          >
+                          
                         </td>
+                        
                       </tr>
-                      <!-- insert new rows -->
+                    
+                      <% for(let i = 0; i < users.length; i++) { %>
 
-                      <tr>
-                       <td></td>
+                            <% for(let j = 0; j < users[i].test.length; j++) { %>
+                              <tr class="clientRow">
+                               
+                                <td class="clientYES" style="display: none;"><%= users[i].name %></td> 
+                           
+                                <td><%= users[i].test[j].date %> </td>
+                             <td><%= users[i].test[j].classification %> </td> 
+                            <td><%= users[i].test[j].bodyfat %> </td>  
+                             <td><%= users[i].test[j].leanMass %></td> 
+                             
+                            </tr>
+                              <% } %>
 
-                      </tr>
+                        <% } %>
+                     
+                     
 
                       <!-- insert new rows -->
                     </tbody>

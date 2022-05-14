@@ -4,13 +4,29 @@ const updateBtn = document.querySelector(".updateButton");
 const viewBtn = document.querySelectorAll(".viewButton");
 const clientName = document.querySelector("#clientName");
 const saveBtn = document.querySelector("#save-button");
+const clientValue = document.querySelector('#clientValue');
+const clientRow = document.querySelector('.clientRow');
+const clientYES = document.querySelectorAll('.clientYES')
+
+
+
 
 for (const button of viewBtn) {
   button.addEventListener("click", (e) => {
     clientName.innerHTML = e.target.dataset.name;
-    console.log(e.target.dataset.name);
+
+    for(let i of clientYES){
+       if(i.innerHTML == clientName.innerHTML){
+         i.style.display = "table-row"
+       } else{
+        i.style.display = "none"
+       }
+    }
+   
+    
   });
 }
+
 
 for (const button of deleteBtn) {
   button.addEventListener("click", (e) => {

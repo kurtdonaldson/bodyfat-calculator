@@ -6,6 +6,7 @@ const MongoClient = require("mongodb").MongoClient;
 const dbURL =
   "mongodb+srv://kurtdonaldson2022:mongoDB2022@cluster0.p9wbv.mongodb.net/?retryWrites=true&w=majority";
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
@@ -23,7 +24,6 @@ app.get("/", (req, res) => {
       .find()
       .toArray()
       .then((results) => {
-        // console.log({ user: results[0].test})
         res.render("index.ejs", { users: results });
       })
       .catch((error) => {
@@ -31,6 +31,12 @@ app.get("/", (req, res) => {
       });
   });
 });
+
+
+
+
+
+
 
 // app.get("/", (req, res) => {
 //   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
