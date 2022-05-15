@@ -6,7 +6,6 @@
 
 h1 {
   color: #ffffff;
-  font-weight: 600;
 }
 
 #h1-div {
@@ -47,6 +46,12 @@ h1 {
   font-weight: 600;
   border: 3px solid #3b656d;
   border-radius: 7px;
+  transition: 0.3s;
+}
+
+#add-new:hover {
+  color: white;
+  background-color: #3b656d;
 }
 
 #name-input {
@@ -91,6 +96,16 @@ h1 {
 #delete-client {
   font-size: 40px;
   margin-right: 40px;
+}
+
+#reset-btn {
+  background-color: #3b656d;
+  color: white;
+  font-weight: 400;
+}
+
+#reset-btn:hover {
+  background-color: #264247;
 }
 
 .search-box input {
@@ -192,4 +207,15 @@ table.table td i {
 
 #calculator-container {
   padding-top: 15px;
+}
+
+#calculate-btn {
+  background: #3b656d;
+  color: white;
+  width: 95%;
+  transition: 0.3s;
+}
+
+#calculate-btn:hover {
+  background: #264247;
 }

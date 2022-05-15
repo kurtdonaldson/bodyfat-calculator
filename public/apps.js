@@ -27,7 +27,6 @@ calculate.addEventListener("click", () => {
       const subscapInput = parseInt(subscap.value);
       const suprailiacInput = parseInt(suprailiac.value);
       const total = bicepsInput + tricepsInput + subscapInput + suprailiacInput;
-      const bodyDensity = 0;
 
       const bodyfatFunc = (bd) => {
         const bodyfatPercentage = 495 / bd - 450;
@@ -119,7 +118,7 @@ calculate.addEventListener("click", () => {
         if (weightButton.checked && weightButton.value == "lbs") {
           leanMass.value =
             (weight.value - weight.value * (bodyfat.value / 100)).toFixed(2) +
-            " kgs";
+            " lbs";
         } else {
           leanMass.value =
             (weight.value - weight.value * (bodyfat.value / 100)).toFixed(2) +
@@ -152,4 +151,8 @@ reset.addEventListener("click", () => {
   subscap.value = "";
   suprailiac.value = "";
   triceps.value = "";
+  bodyfatPopulate.innerHTML = "";
+  todayDate.innerHTML = "";
+  classificationPopulate.innerHTML = "";
+  leanmasspopulate.innerHTML = "";
 });

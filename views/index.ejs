@@ -135,14 +135,14 @@
               </div>
             </section>
             <section
-              class="m-3 me-0 rounded"
+              class="m-3 me-0 rounded shadow bg-white"
               style="background-color: #a1dbed; height: 425px"
             >
               <div id="calculator-container">
                 <div
                   id="calculator-input"
-                  class="shadow p-3 mb-5 bg-white rounded"
                   style="height: 410px; border: 10px solid white"
+                  class="rounded"
                 >
                   <div id="calculator-inner-cont">
                     <div
@@ -396,12 +396,7 @@
                       style="width: 100%"
                       class="text-center"
                     >
-                      <button
-                        id="calculate-btn"
-                        type="button"
-                        class="btn"
-                        style="background: #3b656d; color: white; width: 95%"
-                      >
+                      <button id="calculate-btn" type="button" class="btn">
                         Calculate
                       </button>
                     </div>
@@ -413,11 +408,14 @@
 
           <div class="col-6 p-0" style="height: 800px">
             <section
-              class="m-3 rounded"
+              class="m-3 rounded shadow bg-white"
               style="background-color: #a1dbed; height: 300px"
             >
               <div style="padding-top: 15px">
-                <div class="table-wrapper overflow-auto" style="height: 285px">
+                <div
+                  class="table-wrapper overflow-auto rounded"
+                  style="height: 285px"
+                >
                   <div class="table-title">
                     <div class="row">
                       <div class="col">
@@ -507,74 +505,72 @@
               </div>
             </section>
 
-            <section
-              class="m-3 rounded"
-              style="background-color: #a1dbed; height: 150px"
-            >
-              <div id="results-outer" style="padding-top: 15px">
-                <div
-                  id="results"
-                  style="background-color: white; height: 135px; padding: 15px"
-                >
-                  <h2 id="results-heading">Results</h2>
-                  <table class="table-borderless">
-                    <thead>
-                      <tr>
-                        <th class="col-md-4">Bodyfat%</th>
-                        <th class="col-md-4">Lean mass</th>
-                        <th class="col-md-4">Classification</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <input
-                            id="bodyfat-input"
-                            type="text"
-                            value=""
-                            class="form-control"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            id="lean-mass-input"
-                            type="text"
-                            value=""
-                            class="form-control"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            id="classification-input"
-                            type="text"
-                            class="form-control"
-                            value=""
-                          />
-                        </td>
-                        <td>
-                          <button
-                            id="reset-btn"
-                            type="button"
-                            class="btn"
-                            style="
-                              background-color: #3b656d;
-                              color: white;
-                              font-weight: 400;
-                            "
-                          >
-                            Reset
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <section class="m-3 rounded shadow bg-white">
+              <div
+                style="background-color: #a1dbed; height: 150px"
+                class="rounded"
+              >
+                <div id="results-outer" style="padding-top: 15px">
+                  <div
+                    id="results"
+                    style="
+                      background-color: white;
+                      height: 135px;
+                      padding: 15px;
+                    "
+                    class="rounded"
+                  >
+                    <h2 id="results-heading">Results</h2>
+                    <table class="table-borderless">
+                      <thead>
+                        <tr>
+                          <th class="col-md-4">Bodyfat%</th>
+                          <th class="col-md-4">Lean mass</th>
+                          <th class="col-md-4">Classification</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <input
+                              id="bodyfat-input"
+                              type="text"
+                              value=""
+                              class="form-control"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              id="lean-mass-input"
+                              type="text"
+                              value=""
+                              class="form-control"
+                            />
+                          </td>
+                          <td>
+                            <input
+                              id="classification-input"
+                              type="text"
+                              class="form-control"
+                              value=""
+                            />
+                          </td>
+                          <td>
+                            <button id="reset-btn" type="button" class="btn">
+                              Reset
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </section>
 
             <section
-              class="m-3 rounded shadow p-2 mb-5 rounded"
+              class="m-3 rounded shadow p-2 mb-5"
               style="background-color: white; height: 300px"
             >
               <div id="table-outer">
