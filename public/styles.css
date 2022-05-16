@@ -219,3 +219,13 @@ table.table td i {
 #calculate-btn:hover {
   background: #264247;
 }
+
+@media (max-width: 1150px) {
+  #measurement-sites{
+    margin-top: 30px;
+  }
+  #calculator-container{
+    padding-top: 0;
+  }
+}
+
