@@ -2,13 +2,10 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
-const dotenv = require('dotenv').config();
-const PORT = process.env.PORT || 3000
+const dotenv = require("dotenv").config();
+const PORT = process.env.PORT || 3000;
 //change password with username password. remove firstproject. app.post below will create new DB called node-demo
-const dbURL = process.env.DB_URL
-  
-
-
+const dbURL = process.env.DB_URL;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -34,31 +31,6 @@ app.get("/", (req, res) => {
       });
   });
 });
-
-
-
-
-
-
-
-// app.get("/", (req, res) => {
-//   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
-//     if (err) return console.error(err);
-//     const db = client.db("node-demo");
-//     const collection = db.collection("users");
-//     collection
-//       .find()
-//        .find({name: 'Nicola Donaldson'}, { projection: {Test: 0} })
-//       .toArray()
-//       .then((results) => {
-//       console.log(results)
-//         res.render("index.ejs", { users: results });
-//       })
-//       .catch((error) => {
-//         res.redirect("/");
-//       });
-//   });
-// });
 
 app.post("/users", (req, res) => {
   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
@@ -91,8 +63,6 @@ app.delete("/users", (req, res) => {
       });
   });
 });
-
-
 
 app.put("/users", (req, res) => {
   MongoClient.connect(dbURL, { useUnifiedTopology: true }, (err, client) => {
